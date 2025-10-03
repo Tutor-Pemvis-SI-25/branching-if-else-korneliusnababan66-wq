@@ -1,6 +1,3 @@
-// 12S25013 - KORNELIUS NABABAN 
-// 12S25010 - AGNES SIBURIAN 
-
 import java.util.*;
 import java.lang.Math;
 
@@ -8,38 +5,43 @@ public class T00 {
     private static Scanner input = new Scanner(System.in);
 
     public static void main(String[] args) {
-        double bil1, bil2;
+        int a, b, tambah, kali;
 
-        bil1 = input.nextDouble();
-        bil2 = input.nextDouble();
-        if (bil1 % 2 == 0) {
-            System.out.println("bilangan pertama: Genap");
+        a = Integer.parseInt(input.nextLine());
+        b = Integer.parseInt(input.nextLine());
+        if (a % 2 == 0) {
+            System.out.println("Bilangan pertama: Genap");
         } else {
-            System.out.println("Bilangan pertama: ganjil");
+            System.out.println("Bilangan pertama: Ganjil");
         }
-        if (bil2 % 2 == 0) {
-            System.out.println("Bilangan kedua: genap");
+        if (b % 2 == 0) {
+            System.out.println("Bilangan kedua: Genap");
         } else {
-            System.out.println("Bilangan kedua: ganjil ");
+            System.out.println("Bilangan kedua: Ganjil");
         }
-        if (bil1 > bil2) {
+        if (a > b) {
             System.out.println("Bilangan pertama lebih besar");
         } else {
-            if (bil1 > bil2) {
-                System.out.println("Bilangan kedua pertama besar");
+            if (a < b) {
+                System.out.println("Bilangan kedua lebih besar");
             } else {
-                System.out.println("bilangan kedua lebih besar");
+                System.out.println("Kedua bilangan sama besar");
             }
         }
-        if (bil1 % 2 == 0 && bil2 % 2 == 0) {
-            System.out.println("hasil penjumlahan: " + bil1 + bil2);
-        } else {
-            if (bil1 % 2 == 1 && bil2 % 2 == 1) {
-                System.out.println("hasil perkalian: " + bil1 * bil2);
+        if (a % 2 == 0) {
+            if (b % 2 == 0) {
+                tambah = a + b;
+                System.out.println("Hasil penjumlahan: " + tambah);
             } else {
-                System.out.println("berbeda jenis ");
+                System.out.println("Berbeda jenis");
             }
-            System.out.println("terimakasih");
+        } else {
+            if (b % 2 != 0) {
+                kali = a * b;
+                System.out.println("Hasil perkalian: " + kali);
+            } else {
+                System.out.println("Berbeda jenis");
+            }
         }
     }
 }
